@@ -1,0 +1,311 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#020617;
+}
+
+.app{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+linear-gradient(
+  rgba(2,6,23,0.55),
+  rgba(2,6,23,0.65)
+),
+url("https://images.unsplash.com/photo-1474487548417-781cb71495f3");
+  background-size:cover;
+  background-position:center;
+  padding:20px;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(0,212,255,0.18),
+    transparent
+  );
+}
+
+.container{
+  width:430px;
+  position:relative;
+  z-index:2;
+}
+
+.logo{
+  width:80px;
+  height:80px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #00d4ff,
+    #7c4dff
+  );
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  margin:auto;
+
+  font-size:40px;
+
+  color:white;
+}
+
+h1{
+  color:white;
+  text-align:center;
+  margin-top:20px;
+}
+
+.subtitle{
+  color:#9ca3af;
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:20px;
+}
+
+.tabs{
+  display:flex;
+  background:#111827;
+  padding:5px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.tabs button{
+  flex:1;
+  padding:14px;
+  border:none;
+  background:none;
+  color:#aaa;
+  border-radius:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.tabs button.active{
+  background:
+  linear-gradient(
+    135deg,
+    #00d4ff,
+    #7c4dff
+  );
+
+  color:white;
+}
+
+.card{
+  background:rgba(17,24,39,0.9);
+
+  backdrop-filter:blur(20px);
+
+  padding:30px;
+
+  border-radius:25px;
+
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+label{
+  display:block;
+  color:white;
+  margin-top:15px;
+  margin-bottom:10px;
+}
+
+input{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:#1f2937;
+  color:white;
+  margin-bottom:10px;
+  outline:none;
+}
+
+input:focus{
+  border:1px solid #00d4ff;
+}
+
+.captchaRow{
+  display:flex;
+  gap:10px;
+}
+
+.captchaBox{
+  width:120px;
+  height:50px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #00d4ff,
+    #7c4dff
+  );
+
+  border-radius:14px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:white;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+.mainBtn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:14px;
+
+  margin-top:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #00d4ff,
+    #7c4dff
+  );
+
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.mainBtn:hover{
+  transform:scale(1.02);
+}
+
+.disabledBtn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:14px;
+  margin-top:20px;
+
+  background:#555;
+  color:#bbb;
+  cursor:not-allowed;
+}
+
+.accountText{
+  margin-top:20px;
+  color:#ccc;
+  text-align:center;
+}
+
+.accountText span{
+  color:#00d4ff;
+  margin-left:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.requestItem{
+  background:#1f2937;
+  padding:20px;
+  border-radius:18px;
+  margin-top:20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.requestItem h3{
+  color:#00d4ff;
+  margin-bottom:5px;
+}
+
+.requestItem p{
+  color:white;
+}
+
+.badge{
+  padding:10px 14px;
+  border-radius:40px;
+  font-size:13px;
+}
+
+.blue{
+  background:#00d4ff22;
+  color:#00d4ff;
+}
+
+.green{
+  background:#00ff9922;
+  color:#00ff99;
+}
+
+.popup{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.6);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:100;
+}
+
+.popupCard{
+  background:#111827;
+  padding:40px;
+  border-radius:25px;
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  animation:pop 0.4s ease;
+}
+
+.popupCard h2{
+  color:#00ff99;
+  margin-bottom:15px;
+}
+
+.popupCard p{
+  color:white;
+}
+
+.registerTitle{
+  color:white;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+@keyframes pop{
+  from{
+    transform:scale(0.7);
+    opacity:0;
+  }
+
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
